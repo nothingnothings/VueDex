@@ -1,0 +1,11 @@
+.employee-list-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  right: 0;
+  top: 0;
+
+  .employee-list {
+    height: 100%;
+    list-style: none;
+  }
+}
