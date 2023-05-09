@@ -13,6 +13,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/search',
+    props: true,
     name: 'PokemonSearch',
     component: () => import('../pages/PokemonSearch.vue'),
   },

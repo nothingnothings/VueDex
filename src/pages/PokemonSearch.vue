@@ -17,7 +17,7 @@ import { SimplePokemon } from '../interfaces/SimplePokemon';
 import { PropType, defineComponent } from 'vue';
 
 interface PokemonSearchPageState {
-  searchedPokemon: string;
+  // searchedPokemon: string;
   filteredPokemons: SimplePokemon[];
 }
 
@@ -30,17 +30,19 @@ export default defineComponent({
 
   data(): PokemonSearchPageState {
     return {
-      searchedPokemon: '',
+      // searchedPokemon: '',
       filteredPokemons: [],
     };
   },
 
-  mounted() {
+  created() {
+    // console.log(this);
+    // this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
     console.log(this);
-    this.filteredPokemons = this.$props.pokedex as SimplePokemon[];
+    this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
   },
   props: {
-    pokedex: {
+    pokemons: {
       type: Array as PropType<SimplePokemon[]>,
     },
     isLoading: {
@@ -56,23 +58,38 @@ export default defineComponent({
 
   methods: {
     inputChangedHandler(event: Event) {
-      this.searchedPokemon = (event.target as HTMLInputElement).value;
-
-      console.log(this.searchedPokemon);
-      console.log(this.filteredPokemons);
+      const searchedPokemon = (event.target as HTMLInputElement).value;
+      this.filteredPokemons = this.filteredPokemons.filter(
+        (pokemon: SimplePokemon) => {
+          return pokemon.name
+            .toUpperCase()
+            .includes(searchedPokemon.toUpperCase());
+        }
+      );
     },
   },
 
   watch: {
-    searchedPokemon() {
-      if (this.searchedPokemon !== '') {
-        this.filteredPokemons = (this.$props.pokedex as SimplePokemon[]).filter(
-          (pokemon: SimplePokemon) => {
-            return pokemon.name
-              .toUpperCase()
-              .includes(this.searchedPokemon.toUpperCase());
-          }
-        );
+    // searchedPokemon() {
+    //   console.log(this.$props.pokemons?.length);
+    //   if (this.searchedPokemon !== '') {
+    //     this.filteredPokemons = (
+    //       this.$props.pokemons as SimplePokemon[]
+    //     ).filter((pokemon: SimplePokemon) => {
+    //       return pokemon.name
+    //         .toUpperCase()
+    //         .includes(this.searchedPokemon.toUpperCase());
+    //     });
+    //   }
+    // },
+    data() {
+      console.log('ENTROU MESMO');
+    },
+
+    pokemons() {
+      console.log('ENTERED');
+      if (this.pokemons) {
+        this.filteredPokemons = this.pokemons as SimplePokemon[];
       }
     },
   },
