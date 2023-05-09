@@ -31,27 +31,27 @@
                 #{{ zeroPad(pokemon!.id, 3) }}
               </h3>
             </div>
+          </div>
+          <div
+            class="pokemon-details-card__image-wrapper d-flex justify-content-center mt-4 mt-sm-5"
+          >
+            <img
+              :src="pokemonImage"
+              :alt="pokemon?.name"
+              class="pokemon-details-card__image"
+            />
+          </div>
+          <div class="pokemon-details-card__body px-5 py-3 py-md-4 mx-5 mt-4">
             <div
-              class="pokemon-details-card__image-wrapper d-flex justify-content-center mt-4 mt-sm-5"
+              class="pokemon-details-card__body__skills text-nowrap d-flex flex-wrap flex-sm-nowrap align-items-center my-3"
             >
-              <img
-                :src="pokemonImage"
-                :alt="pokemon?.name"
-                class="pokemon-details-card__image"
-              />
-            </div>
-            <div class="pokemon-details-card__body px-5 py-3 py-md-4 mx-5 mt-4">
+              <strong class="mb-2 mb-sm-0">Habilidades:</strong>&nbsp;
               <div
-                class="pokemon-details-card__body__skills text-nowrap d-flex flex-wrap flex-sm-nowrap align-items-center my-3"
+                v-for="abilityObject in pokemon?.abilities"
+                class="pokemon-details-card__body-skill my-1 my-sm-0 ml-2 mr-1 px-2 py-1"
+                :key="abilityObject.ability.name"
               >
-                <strong class="mb-2 mb-sm-0">Habilidades:</strong>&nbsp;
-                <div
-                  v-for="abilityObject in pokemon?.abilities"
-                  class="pokemon-details-card__body-skill my-1 my-sm-0 ml-2 mr-1 px-2 py-1"
-                  :key="abilityObject.ability.name"
-                >
-                  {{ abilityObject.ability.name }}
-                </div>
+                {{ abilityObject.ability.name }}
               </div>
             </div>
             <div

@@ -6,6 +6,7 @@
     :isSearch="true"
     :isDetails="false"
     :isLoading="isLoading"
+    :inputChanged="inputChangedHandler"
   ></Pokedex>
   <ErrorComponent :errorMessage="errorMessage" v-else></ErrorComponent>
 </template>
@@ -33,6 +34,11 @@ export default defineComponent({
       filteredPokemons: [],
     };
   },
+
+  mounted() {
+    console.log(this);
+    this.filteredPokemons = this.$props.pokedex as SimplePokemon[];
+  },
   props: {
     pokedex: {
       type: Array as PropType<SimplePokemon[]>,
@@ -51,6 +57,9 @@ export default defineComponent({
   methods: {
     inputChangedHandler(event: Event) {
       this.searchedPokemon = (event.target as HTMLInputElement).value;
+
+      console.log(this.searchedPokemon);
+      console.log(this.filteredPokemons);
     },
   },
 

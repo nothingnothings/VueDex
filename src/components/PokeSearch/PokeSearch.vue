@@ -7,7 +7,7 @@
             type="text"
             class="form-control custom-form-control"
             placeholder="Procurar por um Pokémon"
-            @change="
+            @input="
               (event: Event) => {
                 inputChanged(event);
               }
