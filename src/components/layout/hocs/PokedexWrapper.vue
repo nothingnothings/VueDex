@@ -2,17 +2,21 @@
   <div
     class="pokedex-wrapper-container"
     :class="{ 'details-wrapper': isDetails }"
-  ></div>
+  >
+    <div class="pokedex-title pt-2 mt-4 mt-md-0">
+      <h1 class="text-center text-md-nowrap mt-5 pt-5">{{ message }}</h1>
+    </div>
+    <slot></slot>
+  </div>
 </template>
 <script lang="ts">
-import ThePokeball from './ThePokeball.vue';
 export default {
   name: 'SpinnerComponent',
 
-  components: {
-    ThePokeball,
-  },
   props: {
+    message: {
+      type: String,
+    },
     isDetails: {
       type: Boolean,
     },

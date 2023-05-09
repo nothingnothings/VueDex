@@ -23,7 +23,7 @@
   </PokedexWrapper>
 </template>
 <script lang="ts">
-import PokedexWrapper from '../hocs/PokedexWrapper/PokedexWrapper';
+import PokedexWrapper from '../layout/hocs/PokedexWrapper.vue';
 import Spinner from '../layout/TheSpinner.vue';
 import PokeSearch from '../PokeSearch/PokeSearch.vue';
 import Card from './Card/Card.vue';
