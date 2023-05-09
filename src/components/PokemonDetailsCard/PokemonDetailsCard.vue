@@ -96,7 +96,7 @@ import { PropType } from 'vue';
 import { Pokemon } from '../../interfaces/Pokemon';
 
 export default {
-  name: 'PokeSearchComponent',
+  name: 'PokemonDetailsCardComponent',
 
   props: {
     pokemon: Object as PropType<Pokemon>,

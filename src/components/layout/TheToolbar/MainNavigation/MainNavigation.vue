@@ -8,7 +8,7 @@
 <script lang="ts">
 import NavigationItems from './NavigationItems/NavigationItems.vue';
 export default {
-  name: 'SpinnerComponent',
+  name: 'MainNavigationComponent',
 
   components: {
     NavigationItems,

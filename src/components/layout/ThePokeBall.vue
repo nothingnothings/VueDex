@@ -3,7 +3,7 @@
 </template>
 <script lang="ts">
 export default {
-  name: 'PokeBallComponent',
+  name: 'ThePokeBallComponent',
 
   props: {
     isSpin: {

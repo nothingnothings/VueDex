@@ -10,7 +10,7 @@
 <script lang="ts">
 import ThePokeball from './ThePokeball.vue';
 export default {
-  name: 'SpinnerComponent',
+  name: 'TheSpinnerComponent',
 
   components: {
     ThePokeball,
