@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="pokemonLink">
+  <router-link :to="pokemonLink" class="pokemon-link">
     <div
       class="card px-2 mb-5 d-flex flex-row align-items-center justify-content-center position-relative"
     >

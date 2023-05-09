@@ -1,6 +1,6 @@
 <template>
   <div
-    class="pokedex-wrapper-container"
+    class="pokedex-wrapper container"
     :class="{ 'details-wrapper': isDetails }"
   >
     <div class="pokedex-title pt-2 mt-4 mt-md-0">

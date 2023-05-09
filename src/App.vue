@@ -1,11 +1,13 @@
 <template>
   <div>
     <TheToolbar />
-    <router-view v-slot="slotProps">
-      <transition name="route" mode="out-in">
-        <component :is="slotProps.Component" :pokemons="pokedex"></component>
-      </transition>
-    </router-view>
+    <main>
+      <router-view v-slot="slotProps">
+        <transition name="route" mode="out-in">
+          <component :is="slotProps.Component" :pokemons="pokedex"></component>
+        </transition>
+      </router-view>
+    </main>
   </div>
 </template>
 
