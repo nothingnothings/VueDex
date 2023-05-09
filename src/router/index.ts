@@ -4,22 +4,22 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Pokedex',
-    component: () => import('@/pages/PokedexPage.vue'),
+    component: () => import('../pages/PokedexPage.vue'),
   },
   {
     path: '/pokedex/pokemonId',
     name: 'PokemonDetails',
-    component: () => import('@/pages/PokemonDetails.vue'),
+    component: () => import('../pages/PokemonDetails.vue'),
   },
   {
     path: '/search',
     name: 'PokemonSearch',
-    component: () => import('@/pages/PokemonSearch.vue'),
+    component: () => import('../pages/PokemonSearch.vue'),
   },
-  {
-    path: '/notFound(.*)',
-    component: () => import('@/pages/NotFound.vue'),
-  },
+  // {
+  //   path: '/notFound(.*)',
+  //   component: () => import('../pages/NotFound.vue'),
+  // },
 ];
 
 const router = createRouter({

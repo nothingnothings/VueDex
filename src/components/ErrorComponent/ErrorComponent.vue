@@ -2,7 +2,7 @@
   <PokedexWrapper :isDetails="true" :message="'Pokédex'">
     <div class="error-wrapper mt-sm-5 pt-sm-5">
       <div class="row d-flex justify-content-center mt-5 pt-5">
-        <ThePokeball :isSpin="false"></ThePokeball>
+        <ThePokeBall :isSpin="false"></ThePokeBall>
         <div class="container">
           <div class="row d-flex justify-content-center my-2 text-center">
             <div class="col-9">
@@ -23,20 +23,21 @@
   </PokedexWrapper>
 </template>
 <script lang="ts">
-import ThePokeball from '../layout/ThePokeball.vue';
+import { defineComponent } from 'vue';
+import ThePokeBall from '../layout/ThePokeBall.vue';
 import PokedexWrapper from '../layout/hocs/PokedexWrapper.vue';
-export default {
+export default defineComponent({
   name: 'ErrorComponent',
 
   components: {
     PokedexWrapper,
-    ThePokeball,
+    ThePokeBall,
   },
 
   props: {
     errorMessage: String,
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 @import '@/styles/error-component.scss';

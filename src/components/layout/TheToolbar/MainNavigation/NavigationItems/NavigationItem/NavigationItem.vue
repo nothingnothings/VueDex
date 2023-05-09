@@ -4,7 +4,9 @@
   </li>
 </template>
 <script lang="ts">
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'NavigationItemComponent',
 
   props: {
@@ -15,7 +17,7 @@ export default {
       type: String,
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 @import '@/styles/navigation-item.scss';

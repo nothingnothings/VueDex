@@ -1,7 +1,7 @@
 <template>
   <Pokedex
     v-if="!isError"
-    :pokemons="pokedex"
+    :pokemons="filteredPokemons"
     :wrapperMessage="'Procurar por um Pokémon'"
     :isSearch="true"
     :isDetails="true"
@@ -12,19 +12,25 @@
 <script lang="ts">
 import ErrorComponent from '../components/ErrorComponent/ErrorComponent.vue';
 import Pokedex from '@/components/Pokedex/Pokedex.vue';
-import { SimplePokemon } from '@/interfaces/SimplePokemon';
-import { PropType } from 'vue';
+import { SimplePokemon } from '../interfaces/SimplePokemon';
+import { PropType, defineComponent } from 'vue';
 
-export default {
-  name: 'PokedexPageComponent',
+interface PokemonSearchPageState {
+  searchedPokemon: string;
+  filteredPokemons: SimplePokemon[];
+}
+
+export default defineComponent({
+  name: 'PokemonSearchPageComponent',
   components: {
     Pokedex,
     ErrorComponent,
   },
 
-  data() {
+  data(): PokemonSearchPageState {
     return {
       searchedPokemon: '',
+      filteredPokemons: [],
     };
   },
   props: {
@@ -47,5 +53,19 @@ export default {
       this.searchedPokemon = (event.target as HTMLInputElement).value;
     },
   },
-};
+
+  watch: {
+    searchedPokemon() {
+      if (this.searchedPokemon !== '') {
+        this.filteredPokemons = (this.$props.pokedex as SimplePokemon[]).filter(
+          (pokemon: SimplePokemon) => {
+            return pokemon.name
+              .toUpperCase()
+              .includes(this.searchedPokemon.toUpperCase());
+          }
+        );
+      }
+    },
+  },
+});
 </script>

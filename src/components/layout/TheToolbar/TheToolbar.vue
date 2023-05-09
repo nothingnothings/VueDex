@@ -4,8 +4,9 @@
   </header>
 </template>
 <script lang="ts">
+import { defineComponent } from 'vue';
 import MainNavigation from './MainNavigation/MainNavigation.vue';
-export default {
+export default defineComponent({
   name: 'TheToolbarComponent',
 
   components: {
@@ -16,7 +17,7 @@ export default {
       type: Boolean,
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 @import '@/styles/toolbar.scss';

@@ -28,10 +28,10 @@
   </router-link>
 </template>
 <script lang="ts">
-import { PropType } from 'vue';
-import { SimplePokemon } from '@/interfaces/SimplePokemon';
+import { PropType, defineComponent } from 'vue';
+import { SimplePokemon } from '../../../interfaces/SimplePokemon';
 
-export default {
+export default defineComponent({
   name: 'CardComponent',
 
   props: {
@@ -52,7 +52,7 @@ export default {
       return `/pokedex/${this.$props.pokemon?.id}`;
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 @import '@/styles/card.scss';

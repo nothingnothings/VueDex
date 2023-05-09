@@ -1,12 +1,7 @@
-<template>
-  <Pokedex></Pokedex>
+<template lang="">
+  <div></div>
 </template>
-<script lang="ts">
-export default {
-  components: {
-    Pokedex,
-  },
-};
+<script>
+export default {};
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang=""></style>

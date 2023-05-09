@@ -92,10 +92,10 @@
   </div>
 </template>
 <script lang="ts">
-import { PropType } from 'vue';
+import { PropType, defineComponent } from 'vue';
 import { Pokemon } from '../../interfaces/Pokemon';
 
-export default {
+export default defineComponent({
   name: 'PokemonDetailsCardComponent',
 
   props: {
@@ -117,7 +117,7 @@ export default {
       return `https://img.pokemondb.net/artwork/large/${this.pokemon?.name}.jpg`;
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 @import '@/styles/pokemon-details.scss';

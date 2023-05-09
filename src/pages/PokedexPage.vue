@@ -12,10 +12,10 @@
 <script lang="ts">
 import ErrorComponent from '../components/ErrorComponent/ErrorComponent.vue';
 import Pokedex from '@/components/Pokedex/Pokedex.vue';
-import { SimplePokemon } from '@/interfaces/SimplePokemon';
-import { PropType } from 'vue';
+import { SimplePokemon } from '../interfaces/SimplePokemon';
+import { PropType, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'PokedexPageComponent',
   components: {
     Pokedex,
@@ -41,5 +41,5 @@ export default {
       type: String,
     },
   },
-};
+});
 </script>

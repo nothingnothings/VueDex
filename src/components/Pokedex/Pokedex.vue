@@ -27,10 +27,10 @@ import PokedexWrapper from '../layout/hocs/PokedexWrapper.vue';
 import Spinner from '../layout/TheSpinner.vue';
 import PokeSearch from '../PokeSearch/PokeSearch.vue';
 import Card from './Card/Card.vue';
-import { PropType } from 'vue';
-import { SimplePokemon } from '@/interfaces/SimplePokemon';
+import { PropType, defineComponent } from 'vue';
+import { SimplePokemon } from '../../interfaces/SimplePokemon';
 
-export default {
+export default defineComponent({
   name: 'PokedexComponent',
   components: {
     PokedexWrapper,
@@ -58,7 +58,7 @@ export default {
       type: Function as PropType<(event: Event) => void>,
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 @import '@/styles/pokedex.scss';

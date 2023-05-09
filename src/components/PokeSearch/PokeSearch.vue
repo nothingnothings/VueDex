@@ -19,9 +19,9 @@
   </div>
 </template>
 <script lang="ts">
-import { PropType } from 'vue';
+import { PropType, defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'PokeSearchComponent',
 
   props: {
@@ -30,6 +30,6 @@ export default {
       required: true,
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped></style>
