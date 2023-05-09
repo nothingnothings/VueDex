@@ -66,8 +66,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import '@/styles/essentials.scss';
-
 * {
   box-sizing: border-box;
 }

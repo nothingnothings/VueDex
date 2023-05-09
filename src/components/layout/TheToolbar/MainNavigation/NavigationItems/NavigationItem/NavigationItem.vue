@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="main-header__item nav-item px-4 text-nowrap">
     <router-link :to="link">{{ text }}</router-link>
   </li>
 </template>
@@ -19,6 +19,7 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss" scoped>
+
+<style lang="scss">
 @import '@/styles/navigation-item.scss';
 </style>

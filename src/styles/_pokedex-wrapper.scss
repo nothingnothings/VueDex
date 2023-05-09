@@ -4,8 +4,17 @@
   height: 100%;
 }
 
-.pokedex-title h1 {
-  font-size: 64px;
+.pokedex-title {
+  font-family: 'Pokemon Font';
+  letter-spacing: 4px;
+  color: var(--pokemon-yellow);
+  -webkit-text-stroke-width: 3.5px;
+  -webkit-text-stroke-color: var(--pokemon-blue);
+  cursor: default;
+
+  h1 {
+    font-size: 64px;
+  }
 }
 
 /* DETAILS-WRAPPER */
