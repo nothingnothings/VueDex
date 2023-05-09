@@ -1,5 +1,9 @@
 <template>
-  <PokedexWrapper :message="wrapperMessage" :isDetails="isDetails">
+  <PokedexWrapper
+    v-if="!isLoading && pokemons!.length > 0"
+    :message="wrapperMessage"
+    :isDetails="isDetails"
+  >
     <div class="container pokedex mt-3 pt-2">
       <PokeSearch v-if="isSearch" :inputChanged="inputChanged"></PokeSearch>
     </div>
@@ -13,11 +17,16 @@
       </div>
     </div>
   </PokedexWrapper>
+
+  <PokedexWrapper v-else :message="wrapperMessage" :isDetails="true">
+    <Spinner></Spinner>
+  </PokedexWrapper>
 </template>
 <script lang="ts">
 import PokedexWrapper from '../hocs/PokedexWrapper/PokedexWrapper';
-import PokeSearch from '../PokeSearch/PokeSearch';
-import Card from '../Card/Card';
+import Spinner from '../layout/TheSpinner.vue';
+import PokeSearch from '../PokeSearch/PokeSearch.vue';
+import Card from './Card/Card.vue';
 import { PropType } from 'vue';
 import { SimplePokemon } from '@/interfaces/SimplePokemon';
 
@@ -32,7 +41,9 @@ export default {
   props: {
     pokemons: {
       type: Array as PropType<SimplePokemon[]>,
-      default: [],
+    },
+    isLoading: {
+      type: Boolean,
     },
     wrapperMessage: {
       type: String,
@@ -49,4 +60,6 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import '@/styles/pokedex.scss';
+</style>

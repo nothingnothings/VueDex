@@ -1,0 +1,23 @@
+<template>
+  <header class="main-header">
+    <MainNavigation></MainNavigation>
+  </header>
+</template>
+<script lang="ts">
+import MainNavigation from './MainNavigation/MainNavigation.vue';
+export default {
+  name: 'TheToolbarComponent',
+
+  components: {
+    MainNavigation,
+  },
+  props: {
+    isSpin: {
+      type: Boolean,
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+@import '@/styles/toolbar.scss';
+</style>
