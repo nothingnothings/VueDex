@@ -4,7 +4,7 @@
     :pokemons="filteredPokemons"
     :wrapperMessage="'Procurar por um Pokémon'"
     :isSearch="true"
-    :isDetails="true"
+    :isDetails="false"
     :isLoading="isLoading"
   ></Pokedex>
   <ErrorComponent :errorMessage="errorMessage" v-else></ErrorComponent>

@@ -24,18 +24,18 @@
   color: var(--dark);
 }
 
-.main-header__item a.active {
+.main-header__item a.active-path {
   pointer-events: none;
 }
 
 /* THIS SELECTOR DOESNT WORK IN - INTERNET EXPLORER 11, FIREFOX, OPERA MINI/OPERA MOBILE AND SAMSUNG INTERNET */
 
-.main-header__item:has(a.active) {
+.main-header__item:has(a.active-path) {
   background-color: var(--white);
   pointer-events: none;
 }
 
-.main-header__item:has(a.active) a {
+.main-header__item:has(a.active-path) a {
   color: var(--dark);
 }
 

@@ -2,7 +2,7 @@
   <Pokedex
     v-if="!errorMessage"
     :pokemons="pokemons"
-    :wrapperMessage="'Pokedéx'"
+    :wrapperMessage="'Pokédex'"
     :isSearch="false"
     :isDetails="false"
     :isLoading="isLoading"
