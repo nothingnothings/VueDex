@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://nothingnothings.github.io/VueDex"><strong>https://nothingnothings.github.io/VueDex</strong></a>
+  <a href="https://nothingnothings.github.io/VueDex" target="_blank" rel="noreferrer noopener"><strong>https://nothingnothings.github.io/VueDex</strong></a>
   <br>
 </p>
 
