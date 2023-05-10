@@ -16,10 +16,13 @@ git init
 git add -A
 git commit -m 'deploy'
 
+git config --global user.email "arthur.panazolo@acad.pucrs.br"
+git config --global user.name "Arthur Panazolo"
+
 # if you are deploying to https://<USERNAME>.github.io
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
- git push -f git@github.com:nothingnothings/VueDex.git master:gh-pages
+git push -f git@github.com:nothingnothings/VueDex.git master:gh-pages
 
 cd -
