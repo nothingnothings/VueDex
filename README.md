@@ -403,7 +403,7 @@ Para usar este projeto, clone-o usando Git:
 
 1. Rode `git clone` para clonar o projeto dentro de seu repositório local Git
 2. Rode `npm install` para instalar todas as dependências (`react`, `axios`, etc)
-3. Rode `npm run build` para criar a versão de produção/implementação (production/deployment) do aplicativo (produzido no diretório `/build`)
+3. Rode `npm run build` para criar a versão de produção/implementação (production/deployment) do aplicativo (produzido no diretório `/dist`)
 4. Sirva os arquivos de produção/implementação localmente ou na web (com a ajuda de algum serviço de hospedagem)
 5. Na página "Pokédex", clique/toque no Pokémon cujas características deseja visualizar. Na página "Procurar por um Pokémon", digite o nome do Pokémon que deseja buscar
 
