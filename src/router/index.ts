@@ -23,9 +23,7 @@ const routes: Array<RouteRecordRaw> = [
   // },
 ];
 const router = createRouter({
-  history: createWebHistory(
-    process.env.NODE_ENV === 'production' ? '/VueDex/' : '/'
-  ),
+  history: createWebHistory('/VueDex'),
   linkActiveClass: 'active-path',
   routes,
 });
