@@ -3,16 +3,20 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: { name: 'Pokedex' },
+  },
+  {
+    path: '/VueDex',
     name: 'Pokedex',
     component: () => import('../pages/PokedexPage.vue'),
   },
   {
-    path: '/pokedex/:pokemonId',
+    path: 'VueDex/pokedex/:pokemonId',
     name: 'PokemonDetails',
     component: () => import('../pages/PokemonDetails.vue'),
   },
   {
-    path: '/search',
+    path: 'VueDex/search',
     props: true,
     name: 'PokemonSearch',
     component: () => import('../pages/PokemonSearch.vue'),
