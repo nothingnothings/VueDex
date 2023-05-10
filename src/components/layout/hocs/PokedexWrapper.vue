@@ -12,7 +12,6 @@
 <script lang="ts">
 export default {
   name: 'PokedexWrapperComponent',
-
   props: {
     message: {
       type: String,
