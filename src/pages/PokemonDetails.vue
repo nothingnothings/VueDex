@@ -45,7 +45,6 @@ export default defineComponent({
       detailsErrorMessage: '',
     };
   },
-
   components: {
     PokedexWrapper,
     TheSpinner,
