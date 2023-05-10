@@ -14,8 +14,9 @@ cd dist
 
 git init
 
-git config --global user.email "arthur.panazolo@acad.pucrs.br"
-git config --global user.name "Arthur Panazolo"
+sudo cp ~/.ssh/* /root/.ssh/
+
+# git config --global url."https://x-access-token:${VUEDEX_TOKEN}@github.com/".insteadOf "git@github.com:"
 git add -A
 git commit -m 'deploy'
 
