@@ -22,7 +22,6 @@ const routes: Array<RouteRecordRaw> = [
   //   component: () => import('../pages/NotFound.vue'),
   // },
 ];
-
 const router = createRouter({
   history: createWebHistory('/VueDex'),
   linkActiveClass: 'active-path',
