@@ -2,6 +2,10 @@
   <router-link :to="pokemonLink" class="pokemon-link">
     <div
       class="card px-2 mb-5 d-flex flex-row align-items-center justify-content-center position-relative"
+      :class="{
+        'starter-background':
+          pokemon?.id === 1 || pokemon?.id === 2 || pokemon?.id === 3,
+      }"
     >
       <h3 class="pokemon-number text-right position-absolute">
         # {{ pokemon?.id }}
