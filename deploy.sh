@@ -16,7 +16,6 @@ git init
 
 git config --global user.email "arthur.panazolo@acad.pucrs.br"
 git config --global user.name "Arthur Panazolo"
-
 git add -A
 git commit -m 'deploy'
 
