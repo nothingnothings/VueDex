@@ -206,27 +206,39 @@ O output de produção de `npx vue create app`, que pode ser visualizado no bran
 ```
 .\
 │
+├── .vscode\
+│   └── settings.json
+│
+├── css\
+│   ├── 214.72065e3b.css
+│   ├── 252.efe5c231.css
+│   ├── 861.72065e3b.css
+│   └── app.87d71669.css
+│
 ├── fonts\
+│   ├── Pokemon Solid.c76e2194.ttf
 │   └── Pokemon Solid.ttf
 │
-├── static\
-│   │
-│   ├── css\
-│   │   ├── main.d8663289.css
-│   │   └── main.d8663289.css.map
-│   │
-│   ├── js\
-│   │   ├── main.006563d5.js
-│   │   ├── main.006563d5.js.LICENSE.txt
-│   │   └── main.006563d5.js.map
-│   │
-│   └── media\
-│       └── Pokemon Solid.5d60be1f7ff5fcc21fc1.ttf
+├── img\
+│   ├── github-logo.e4cf49de.png
+│   └── vue-logo.ff417bdf.png
 │
+├── js\
+│   ├── 214.d016785f.js
+│   ├── 214.d016785f.js.map
+│   ├── 252.0154d851.js
+│   ├── 252.0154d851.js.map
+│   ├── 656.9f743450.js
+│   ├── 656.9f743450.js.map
+│   ├── 861.1067c55d.js
+│   ├── 861.1067c55d.js.map
+│   ├── app.0d4014c8.js
+│   ├── app.0d4014c8.js.map
+│   ├── chunk-vendors.ae3a0b93.js
+│   └── chunk-vendors.ae3a0b93.js.map
 │
 ├── .nojekyll
 ├── 404.html
-├── asset-manifest.json
 ├── favicon-16x16.png
 ├── favicon-32x32.png
 ├── favicon.ico
