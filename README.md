@@ -1,6 +1,6 @@
 <h1 align="center">VueDex - Uma Pokédex construída com Vue.js</h1>
 <p align="center">
-  <img src="public/logo512.png" alt="Reactdex-logo" width="120px" height="120px"/>
+  <img src="public/logo512.png" alt="VueDex-logo" width="120px" height="120px"/>
   <br>
   <i>Este webApp é um exemplo de aplicativo que pode ser construído com o 
     <br>framework JavaScript Vue.js.</i>
