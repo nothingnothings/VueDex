@@ -30,7 +30,6 @@ export default defineComponent({
       errorMessage: '',
     };
   },
-
   mounted() {
     this.loadPokemon();
   },
