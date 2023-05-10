@@ -10,7 +10,6 @@
     </main>
   </div>
 </template>
-
 <script lang="ts">
 import TheToolbar from './components/layout/TheToolbar/TheToolbar.vue';
 import axios, { AxiosError } from 'axios';
