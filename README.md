@@ -1,4 +1,4 @@
-<h1 align="center">VueDex - Uma Pokédex construída com Vue.js</h1>
+<h1 align="center">VueDex - LeafGreen - Uma Pokédex construída com Vue.js</h1>
 <p align="center">
   <img src="public/logo512.png" alt="VueDex-logo" width="120px" height="120px"/>
   <br>
