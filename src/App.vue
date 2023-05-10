@@ -31,7 +31,6 @@ export default defineComponent({
   mounted() {
     this.loadPokemon();
   },
-
   methods: {
     async loadPokemon() {
       this.isLoading = true;
