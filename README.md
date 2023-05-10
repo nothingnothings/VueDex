@@ -69,6 +69,9 @@ O ambiente de desenvolvimento (com utilização da ferramenta/environment/worfkl
 │       └── publish.yml
 │
 │
+├── .vscode\
+│   └── settings.json
+│
 ├── public\
 │   │
 │   ├── fonts\
@@ -89,99 +92,111 @@ O ambiente de desenvolvimento (com utilização da ferramenta/environment/worfkl
 │
 ├── src\
 │   │
+│   ├── assets\
+│   │   ├── github-logo.png
+│   │   └── vue-logo.png
+│   │
 │   ├── components\
 │   │   │
-│   │   ├── Card\
-│   │   │   ├── Card.css
-│   │   │   └── Card.tsx
-│   │   │
 │   │   ├── ErrorComponent\
-│   │   │   ├── ErrorComponent.css
-│   │   │   └── ErrorComponent.tsx
+│   │   │   └── ErrorComponent.vue
 │   │   │
 │   │   ├── PokeSearch\
-│   │   │   └── PokeSearch.tsx
+│   │   │   └── PokeSearch.vue
 │   │   │
 │   │   ├── Pokedex\
-│   │   │   ├── Pokedex.css
-│   │   │   └── Pokedex.tsx
+│   │   │   │
+│   │   │   ├── Card\
+│   │   │   │   └── Card.vue
+│   │   │   │
+│   │   │   └── Pokedex.vue
 │   │   │
 │   │   ├── PokemonDetailsCard\
-│   │   │   ├── PokemonDetailsCard.css
-│   │   │   └── PokemonDetailsCard.tsx
+│   │   │   └── PokemonDetailsCard.vue
 │   │   │
-│   │   ├── UI\
-│   │   │   │
-│   │   │   ├── PokeBall\
-│   │   │   │   ├── Pokeball.css
-│   │   │   │   └── Pokeball.tsx
-│   │   │   │
-│   │   │   ├── Spinner\
-│   │   │   │   └── Spinner.tsx
-│   │   │   │
-│   │   │   └── Toolbar\
-│   │   │       │
-│   │   │       ├── MainNavigation\
-│   │   │       │   │
-│   │   │       │   ├── NavigationItems\
-│   │   │       │   │   │
-│   │   │       │   │   ├── NavigationItem\
-│   │   │       │   │   │   ├── NavigationItem.css
-│   │   │       │   │   │   └── NavigationItem.tsx
-│   │   │       │   │   │
-│   │   │       │   │   ├── NavigationItems.css
-│   │   │       │   │   └── NavigationItems.tsx
-│   │   │       │   │
-│   │   │       │   ├── MainNavigation.css
-│   │   │       │   └── MainNavigation.tsx
-│   │   │       │
-│   │   │       ├── Toolbar.css
-│   │   │       └── Toolbar.tsx
-│   │   │
-│   │   │
-│   │   ├── Utility\
-│   │   │   │
-│   │   │   └── ScrollToTop\
-│   │   │       └── ScrollToTop.tsx
-│   │   │
-│   │   │
-│   │   └── hocs\
+│   │   └── layout\
 │   │       │
-│   │       ├── Layout\
-│   │       │   └── Layout.tsx
+│   │       ├── TheToolbar\
+│   │       │   │
+│   │       │   ├── MainNavigation\
+│   │       │   │   │
+│   │       │   │   ├── NavigationItems\
+│   │       │   │   │   │
+│   │       │   │   │   ├── NavigationItem\
+│   │       │   │   │   │   └── NavigationItem.vue
+│   │       │   │   │   │
+│   │       │   │   │   └── NavigationItems.vue
+│   │       │   │   │
+│   │       │   │   └── MainNavigation.vue
+│   │       │   │
+│   │       │   └── TheToolbar.vue
 │   │       │
-│   │       └── PokedexWrapper\
-│   │           ├── PokedexWrapper.css
-│   │           └── PokedexWrapper.tsx
+│   │       ├── hocs\
+│   │       │   └── PokedexWrapper.vue
+│   │       │
+│   │       ├── ThePokeBall.vue
+│   │       └── TheSpinner.vue
 │   │
 │   │
-│   │
-│   ├── models\
-│   │   ├── pokemon.model.ts
-│   │   └── simplepokemon.model.ts
+│   ├── interfaces\
+│   │   ├── Pokemon.ts
+│   │   └── SimplePokemon.ts
 │   │
 │   ├── pages\
-│   │   │
-│   │   ├── PokedexPage\
-│   │   │   └── PokedexPage.tsx
-│   │   │
-│   │   ├── PokemonDetails\
-│   │   │   └── PokemonDetails.tsx
-│   │   │
-│   │   └── PokemonSearch\
-│   │       └── PokemonSearch.tsx
+│   │   ├── NotFound.vue
+│   │   ├── PokedexPage.vue
+│   │   ├── PokemonDetails.vue
+│   │   └── PokemonSearch.vue
 │   │
+│   ├── router\
+│   │   └── index.ts
 │   │
-│   ├── App.tsx
-│   ├── index.css
-│   ├── index.tsx
-│   └── logo.svg
+│   ├── styles\
+│   │   ├── _card.scss
+│   │   ├── _error-component.scss
+│   │   ├── _global.scss
+│   │   ├── _main-navigation.scss
+│   │   ├── _navigation-item.scss
+│   │   ├── _navigation-items.scss
+│   │   ├── _pokeball.scss
+│   │   ├── _pokedex-wrapper.scss
+│   │   ├── _pokedex.scss
+│   │   ├── _pokemon-details.scss
+│   │   └── _toolbar.scss
+│   │
+│   ├── App.vue
+│   ├── main.ts
+│   └── shims-vue.d.ts
 │
+├── tests\
+│   │
+│   ├── e2e\
+│   │   │
+│   │   ├── plugins\
+│   │   │   └── index.js
+│   │   │
+│   │   ├── specs\
+│   │   │   └── test.js
+│   │   │
+│   │   ├── support\
+│   │   │   ├── commands.js
+│   │   │   └── index.js
+│   │   │
+│   │   └── .eslintrc.js
+│   │
+│   └── unit\
+│       └── example.spec.ts
+│
+│
+├── .dockerignore
+├── .gitignore
 ├── README.md
+├── babel.config.js
+├── cypress.json
 ├── package-lock.json
 ├── package.json
-├── react-app-env.d.ts
-└── tsconfig.json
+├── tsconfig.json
+└── vue.config.ts
 ```
 
 
