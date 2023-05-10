@@ -1,7 +1,10 @@
 env: 
     VUEDEX_TOKEN: ${{ secrets.VUEDEX_TOKEN }}
+permissions:
+      contents: write
 
 name: Publish to gh-pages
+
 
 on:
   repository_dispatch:
