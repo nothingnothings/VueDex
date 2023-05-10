@@ -1,3 +1,6 @@
+env: 
+    VUEDEX_TOKEN: ${{ secrets.VUEDEX_TOKEN }}
+
 name: Publish to gh-pages
 
 on:
