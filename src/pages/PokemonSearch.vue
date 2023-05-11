@@ -36,8 +36,6 @@ export default defineComponent({
   },
 
   created() {
-    // console.log(this);
-    // this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
     console.log(this);
     this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
   },
