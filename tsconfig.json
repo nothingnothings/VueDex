@@ -12,10 +12,8 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": "./VueDex",
     "types": ["webpack-env", "jest"],
-    "paths": {
-    },
+    "paths": {},
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "include": [
