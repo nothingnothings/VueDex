@@ -195,6 +195,7 @@ O ambiente de desenvolvimento (com utilização da ferramenta/environment/worfkl
 ├── package-lock.json
 ├── package.json
 ├── tsconfig.json
+├── vue.config.js
 └── vue.config.ts
 ```
 
@@ -259,7 +260,6 @@ O arquivo package.json utilizado no projeto:
   "name": "vue-dex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nothingnothings.github.io/VueDex",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -376,7 +376,6 @@ O arquivo tsconfig.json utilizado no projeto:
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": ".",
     "types": ["webpack-env", "jest"],
     "paths": {
     },
@@ -401,7 +400,7 @@ O arquivo tsconfig.json utilizado no projeto:
 Para usar este projeto, clone-o usando Git:
 
 1. Rode `git clone` para clonar o projeto dentro de seu repositório local Git
-2. Rode `npm install` para instalar todas as dependências (`react`, `axios`, etc)
+2. Rode `npm install` para instalar todas as dependências (`vue`, `axios`, etc)
 3. Rode `npm run build` para criar a versão de produção/implementação (production/deployment) do aplicativo (produzido no diretório `/dist`)
 4. Sirva os arquivos de produção/implementação localmente ou na web (com a ajuda de algum serviço de hospedagem)
 5. Na página "Pokédex", clique/toque no Pokémon cujas características deseja visualizar. Na página "Procurar por um Pokémon", digite o nome do Pokémon que deseja buscar
