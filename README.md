@@ -45,7 +45,6 @@ O app foi inicializado/bootstrapped com o comando/environment `npx vue create ap
  - HTML5
  - SASS (para melhor organização das regras de CSS, nested rules, etc)
  - CSS3 (animações, Flexbox, media queries)
- - JavaScript "vanilla", para o setup de uma Single-Page Application no GitHub Pages (script posicionado no `<head>` do arquivo `index.html`)
  - Vue.JS versão 3 (framework JavaScript, que propõe a divisão integral do app em Vue components)
  - Typescript (para a type safety dos objetos recebidos pelos endpoints do backend; Models e Interfaces, etc.)
  - Vue Router (para a navegação entre as diferentes "páginas" do aplicativo)
