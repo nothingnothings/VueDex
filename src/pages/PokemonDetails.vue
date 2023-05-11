@@ -56,6 +56,7 @@ export default defineComponent({
   },
   methods: {
     async loadPokemon() {
+      this.isLoading = true;
       try {
         const response = await axios.get(
           `https://pokeapi.co/api/v2/pokemon/${this.$route.params.pokemonId}`
