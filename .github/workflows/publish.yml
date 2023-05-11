@@ -1,4 +1,4 @@
-env: 
+env:
     VUEDEX_TOKEN: ${{ secrets.VUEDEX_TOKEN }}
 permissions:
       contents: write
