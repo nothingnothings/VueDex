@@ -34,7 +34,6 @@ export default defineComponent({
       filteredPokemons: [],
     };
   },
-
   created() {
     console.log(this);
     this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
