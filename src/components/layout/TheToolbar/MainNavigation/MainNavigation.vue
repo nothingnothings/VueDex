@@ -30,11 +30,6 @@ export default defineComponent({
   components: {
     NavigationItems,
   },
-  props: {
-    isSpin: {
-      type: Boolean,
-    },
-  },
 });
 </script>
 <style lang="scss" scoped>
