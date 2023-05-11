@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
   // },
 ];
 const router = createRouter({
-  history: createWebHistory('/VueDex/'),
+  history: createWebHistory('/Dummy/'),
   linkActiveClass: 'active-path',
   routes,
 });
