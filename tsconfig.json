@@ -12,7 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": "./VueDex",
     "types": ["webpack-env", "jest"],
     "paths": {
     },
