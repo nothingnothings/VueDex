@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 const router = createRouter({
   // history: createWebHistory('/VueDex/'),
-  history: createWebHashHistory(),
+  history: createWebHashHistory('/VueDex/'),
   linkActiveClass: 'active-path',
   routes,
   scrollBehavior(_to: any, _from: any, savedPosition: any) {
