@@ -26,6 +26,16 @@ const router = createRouter({
   history: createWebHistory('/VueDex/'),
   linkActiveClass: 'active-path',
   routes,
+  scrollBehavior(_to: any, _from: any, savedPosition: any) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+    return {
+      top: 0,
+      left: 0,
+    };
+
+  }
 });
 
 export default router;
