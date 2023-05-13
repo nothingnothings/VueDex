@@ -1,4 +1,9 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import {
+  createRouter,
+  createWebHashHistory,
+  RouteRecordRaw,
+  RouterScrollBehavior,
+} from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -22,20 +27,23 @@ const routes: Array<RouteRecordRaw> = [
   //   component: () => import('../pages/NotFound.vue'),
   // },
 ];
+
+const scrollBehavior: RouterScrollBehavior = (_to, _from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition;
+  }
+  return {
+    top: 0,
+    left: 0,
+  };
+};
+
 const router = createRouter({
   // history: createWebHistory('/VueDex/'),
   history: createWebHashHistory('/VueDex/'),
   linkActiveClass: 'active-path',
   routes,
-  scrollBehavior(_to: unknown, _from: unknown, savedPosition: unknown | null) {
-    if (savedPosition) {
-      return savedPosition;
-    }
-    return {
-      top: 0,
-      left: 0,
-    };
-  },
+  scrollBehavior,
 });
 
 export default router;
