@@ -1,9 +1,4 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  RouteRecordRaw,
-  Route,
-} from 'vue-router';
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -32,7 +27,7 @@ const router = createRouter({
   history: createWebHashHistory('/VueDex/'),
   linkActiveClass: 'active-path',
   routes,
-  scrollBehavior(_to: Route, _from: Route, savedPosition: unknown | null) {
+  scrollBehavior(_to: unknown, _from: unknown, savedPosition: unknown | null) {
     if (savedPosition) {
       return savedPosition;
     }
