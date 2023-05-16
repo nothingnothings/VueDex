@@ -63,20 +63,6 @@ export default defineComponent({
         }
       }
     },
-
-    // filterPokemon(searchedPokemon: string) {
-    //   this.searchedPokemon = searchedPokemon;
-    //   console.log(this.searchedPokemon, 'EXEMPLO DOS GURi');
-    //   const manipulatedPokemon = this.pokedex.filter(
-    //     (pokemon: SimplePokemon) => {
-    //       return pokemon.name
-    //         .toUpperCase()
-    //         .includes(this.searchedPokemon.toUpperCase());
-    //     }
-    //   );
-
-    //   this.pokedex = manipulatedPokemon;
-    // },
   },
 });
 </script>

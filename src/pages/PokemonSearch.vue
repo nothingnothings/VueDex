@@ -35,7 +35,6 @@ export default defineComponent({
     };
   },
   created() {
-    console.log(this);
     this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
   },
   props: {
@@ -69,14 +68,6 @@ export default defineComponent({
             .includes(this.searchedPokemon.toUpperCase());
         }
       );
-    },
-  },
-
-  watch: {
-    pokemons() {
-      // if (this.pokemons) {
-      //   this.filteredPokemons = this.pokemons as SimplePokemon[];
-      // }
     },
   },
 });

@@ -53,13 +53,7 @@ export default defineComponent({
       noPokemonFoundMessage: null,
     };
   },
-  mounted() {
-    console.log(this, 'THIS DOS GURI ANTERIOR');
-  },
 
-  updated() {
-    console.log(this, 'THIS DOS GURI');
-  },
   components: {
     PokedexWrapper,
     PokeSearch,
