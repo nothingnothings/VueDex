@@ -8,7 +8,7 @@
       <PokeSearch v-if="isSearch" :inputChanged="inputChanged"></PokeSearch>
       <div
         v-if="!isLoading && pokemons?.length === 0"
-        class="col-12 col-sm-11 col-md-8 col-lg-6 mt-4 text-center font-weight-bold"
+        class="col-12 mt-4 text-center font-weight-bold"
       >
         Nenhum Pokémon encontrado.
       </div>
