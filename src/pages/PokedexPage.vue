@@ -4,7 +4,7 @@
     :pokemons="pokemons"
     :wrapperMessage="'Pokédex'"
     :isSearch="false"
-    :isDetails="false"
+    :isDetails="true"
     :isLoading="isLoading"
   ></Pokedex>
   <ErrorComponent v-else></ErrorComponent>
