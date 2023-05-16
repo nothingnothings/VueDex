@@ -4,7 +4,7 @@
     :pokemons="filteredPokemons"
     :wrapperMessage="'Procurar por um Pokémon'"
     :isSearch="true"
-    :isDetails="true"
+    :isDetails="false"
     :isLoading="isLoading"
     :inputChanged="inputChangedHandler"
   ></Pokedex>
@@ -17,6 +17,7 @@ import { SimplePokemon } from '../interfaces/SimplePokemon';
 import { PropType, defineComponent } from 'vue';
 
 interface PokemonSearchPageState {
+  // searchedPokemon: string;
   filteredPokemons: SimplePokemon[];
 }
 
@@ -29,10 +30,12 @@ export default defineComponent({
 
   data(): PokemonSearchPageState {
     return {
+      // searchedPokemon: '',
       filteredPokemons: [],
     };
   },
   created() {
+    console.log(this);
     this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
   },
   props: {
@@ -64,7 +67,24 @@ export default defineComponent({
   },
 
   watch: {
+    // searchedPokemon() {
+    //   console.log(this.$props.pokemons?.length);
+    //   if (this.searchedPokemon !== '') {
+    //     this.filteredPokemons = (
+    //       this.$props.pokemons as SimplePokemon[]
+    //     ).filter((pokemon: SimplePokemon) => {
+    //       return pokemon.name
+    //         .toUpperCase()
+    //         .includes(this.searchedPokemon.toUpperCase());
+    //     });
+    //   }
+    // },
+    data() {
+      console.log('ENTROU MESMO');
+    },
+
     pokemons() {
+      console.log('ENTERED');
       if (this.pokemons) {
         this.filteredPokemons = this.pokemons as SimplePokemon[];
       }
