@@ -4,7 +4,11 @@
     <main>
       <router-view v-slot="slotProps">
         <transition name="route" mode="out-in">
-          <component :is="slotProps.Component" :pokemons="pokedex"></component>
+          <component
+            :is="slotProps.Component"
+            :pokemons="pokedex"
+            :isLoading="isLoading"
+          ></component>
         </transition>
       </router-view>
     </main>

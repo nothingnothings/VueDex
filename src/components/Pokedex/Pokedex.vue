@@ -1,6 +1,6 @@
 <template>
   <PokedexWrapper
-    v-if="!isLoading && pokemons!.length > 0"
+    v-if="!isLoading"
     :message="wrapperMessage"
     :isDetails="isDetails"
   >
@@ -16,9 +16,19 @@
         <Card :pokemon="pokemon"></Card>
       </div>
     </div>
+    <div
+      v-if="!isLoading && pokemons!.length === 0"
+      class="col-12 col-sm-11 col-md-8 col-lg-6 text-center font-weight-bold"
+    >
+      Nenhum Pokémon encontrado.
+    </div>
   </PokedexWrapper>
 
-  <PokedexWrapper v-else :message="wrapperMessage" :isDetails="true">
+  <PokedexWrapper
+    v-if="isLoading && pokemons!.length === 0"
+    :message="wrapperMessage"
+    :isDetails="true"
+  >
     <Spinner></Spinner>
   </PokedexWrapper>
 </template>

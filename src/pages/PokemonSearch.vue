@@ -67,24 +67,7 @@ export default defineComponent({
   },
 
   watch: {
-    // searchedPokemon() {
-    //   console.log(this.$props.pokemons?.length);
-    //   if (this.searchedPokemon !== '') {
-    //     this.filteredPokemons = (
-    //       this.$props.pokemons as SimplePokemon[]
-    //     ).filter((pokemon: SimplePokemon) => {
-    //       return pokemon.name
-    //         .toUpperCase()
-    //         .includes(this.searchedPokemon.toUpperCase());
-    //     });
-    //   }
-    // },
-    data() {
-      console.log('ENTROU MESMO');
-    },
-
     pokemons() {
-      console.log('ENTERED');
       if (this.pokemons) {
         this.filteredPokemons = this.pokemons as SimplePokemon[];
       }
