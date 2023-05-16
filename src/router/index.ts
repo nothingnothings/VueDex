@@ -22,10 +22,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'PokemonSearch',
     component: () => import('../pages/PokemonSearch.vue'),
   },
-  // {
-  //   path: '/notFound(.*)',
-  //   component: () => import('../pages/NotFound.vue'),
-  // },
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/',
+  },
 ];
 
 const scrollBehavior: RouterScrollBehavior = (_to, _from, savedPosition) => {
