@@ -4,7 +4,7 @@
     :pokemons="filteredPokemons"
     :wrapperMessage="'Procurar por um Pokémon'"
     :isSearch="true"
-    :isDetails="false"
+    :isDetails="true"
     :isLoading="isLoading"
     :inputChanged="inputChangedHandler"
   ></Pokedex>
