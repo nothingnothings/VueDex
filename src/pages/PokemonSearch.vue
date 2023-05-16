@@ -17,7 +17,6 @@ import { SimplePokemon } from '../interfaces/SimplePokemon';
 import { PropType, defineComponent } from 'vue';
 
 interface PokemonSearchPageState {
-  // searchedPokemon: string;
   filteredPokemons: SimplePokemon[];
 }
 
@@ -30,12 +29,10 @@ export default defineComponent({
 
   data(): PokemonSearchPageState {
     return {
-      // searchedPokemon: '',
       filteredPokemons: [],
     };
   },
   created() {
-    console.log(this);
     this.filteredPokemons = this.$props.pokemons as SimplePokemon[];
   },
   props: {
