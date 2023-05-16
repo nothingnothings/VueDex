@@ -1,7 +1,7 @@
 <template>
   <Pokedex
     v-if="!isError"
-    :pokemons="filteredPokemons"
+    :pokemons="manipulatedPokemons"
     :wrapperMessage="'Procurar por um Pokémon'"
     :isSearch="true"
     :isDetails="true"
@@ -17,7 +17,7 @@ import { SimplePokemon } from '../interfaces/SimplePokemon';
 import { PropType, defineComponent } from 'vue';
 
 interface PokemonSearchPageState {
-  // searchedPokemon: string;
+  searchedPokemon: string;
   filteredPokemons: SimplePokemon[];
 }
 
@@ -30,7 +30,7 @@ export default defineComponent({
 
   data(): PokemonSearchPageState {
     return {
-      // searchedPokemon: '',
+      searchedPokemon: '',
       filteredPokemons: [],
     };
   },
@@ -56,38 +56,27 @@ export default defineComponent({
   methods: {
     inputChangedHandler(event: Event) {
       const searchedPokemon = (event.target as HTMLInputElement).value;
-      this.filteredPokemons = this.filteredPokemons.filter(
+      this.searchedPokemon = searchedPokemon;
+    },
+  },
+
+  computed: {
+    manipulatedPokemons() {
+      return (this.pokemons as SimplePokemon[]).filter(
         (pokemon: SimplePokemon) => {
           return pokemon.name
             .toUpperCase()
-            .includes(searchedPokemon.toUpperCase());
+            .includes(this.searchedPokemon.toUpperCase());
         }
       );
     },
   },
 
   watch: {
-    // searchedPokemon() {
-    //   console.log(this.$props.pokemons?.length);
-    //   if (this.searchedPokemon !== '') {
-    //     this.filteredPokemons = (
-    //       this.$props.pokemons as SimplePokemon[]
-    //     ).filter((pokemon: SimplePokemon) => {
-    //       return pokemon.name
-    //         .toUpperCase()
-    //         .includes(this.searchedPokemon.toUpperCase());
-    //     });
-    //   }
-    // },
-    data() {
-      console.log('ENTROU MESMO');
-    },
-
     pokemons() {
-      console.log('ENTERED');
-      if (this.pokemons) {
-        this.filteredPokemons = this.pokemons as SimplePokemon[];
-      }
+      // if (this.pokemons) {
+      //   this.filteredPokemons = this.pokemons as SimplePokemon[];
+      // }
     },
   },
 });

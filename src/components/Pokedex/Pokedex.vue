@@ -1,11 +1,17 @@
 <template>
   <PokedexWrapper
-    v-if="!isLoading && pokemons!.length > 0"
+    v-if="!isLoading"
     :message="wrapperMessage"
     :isDetails="isDetails"
   >
     <div class="container pokedex mt-3 pt-2">
       <PokeSearch v-if="isSearch" :inputChanged="inputChanged"></PokeSearch>
+      <div
+        v-if="!isLoading && pokemons?.length === 0"
+        class="col-12 col-sm-11 col-md-8 col-lg-6 mt-4 text-center font-weight-bold"
+      >
+        Nenhum Pokémon encontrado.
+      </div>
     </div>
     <div class="row d-flex justify-content-center mt-5">
       <div
@@ -17,8 +23,11 @@
       </div>
     </div>
   </PokedexWrapper>
-
-  <PokedexWrapper v-else :message="wrapperMessage" :isDetails="true">
+  <PokedexWrapper
+    v-if="isLoading && pokemons!.length === 0 && !noPokemonFoundMessage"
+    :message="wrapperMessage"
+    :isDetails="true"
+  >
     <Spinner></Spinner>
   </PokedexWrapper>
 </template>
@@ -30,8 +39,27 @@ import Card from './Card/Card.vue';
 import { PropType, defineComponent } from 'vue';
 import { SimplePokemon } from '../../interfaces/SimplePokemon';
 
+interface PokedexComponentState {
+  originalPokemons: SimplePokemon[];
+  noPokemonFoundMessage: string | null;
+}
+
 export default defineComponent({
   name: 'PokedexComponent',
+
+  data(): PokedexComponentState {
+    return {
+      originalPokemons: [],
+      noPokemonFoundMessage: null,
+    };
+  },
+  mounted() {
+    console.log(this, 'THIS DOS GURI ANTERIOR');
+  },
+
+  updated() {
+    console.log(this, 'THIS DOS GURI');
+  },
   components: {
     PokedexWrapper,
     PokeSearch,

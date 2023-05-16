@@ -3,9 +3,13 @@
     <TheToolbar />
     <main>
       <router-view v-slot="slotProps">
-        <transition name="route" mode="out-in">
-          <component :is="slotProps.Component" :pokemons="pokedex"></component>
-        </transition>
+        <!-- <transition name="route" mode="out-in"> -->
+        <component
+          :is="slotProps.Component"
+          :pokemons="pokedex"
+          :isLoading="isLoading"
+        ></component>
+        <!-- </transition> -->
       </router-view>
     </main>
   </div>
@@ -28,7 +32,7 @@ export default defineComponent({
       errorMessage: '',
     };
   },
-  mounted() {
+  created() {
     this.loadPokemon();
   },
   methods: {
@@ -59,6 +63,20 @@ export default defineComponent({
         }
       }
     },
+
+    // filterPokemon(searchedPokemon: string) {
+    //   this.searchedPokemon = searchedPokemon;
+    //   console.log(this.searchedPokemon, 'EXEMPLO DOS GURi');
+    //   const manipulatedPokemon = this.pokedex.filter(
+    //     (pokemon: SimplePokemon) => {
+    //       return pokemon.name
+    //         .toUpperCase()
+    //         .includes(this.searchedPokemon.toUpperCase());
+    //     }
+    //   );
+
+    //   this.pokedex = manipulatedPokemon;
+    // },
   },
 });
 </script>
