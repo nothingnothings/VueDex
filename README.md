@@ -32,7 +32,6 @@ The app was initialized/bootstrapped with the command/environment `npx vue creat
 
 
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/nothingnothings/VueDex?style=flat-square)
-[![HitCount](https://hits.dwyl.com/nothingnothings/VueDex.svg?style=flat-square)](http://hits.dwyl.com/nothingnothings/VueDex)
 [![en](https://img.shields.io/badge/lang-en-red.svg?style=flat-square)](https://github.com/nothingnothings/VueDex)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg?style=flat-square)](https://github.com/nothingnothings/VueDex/blob/master/README.pt-br.md)
 
