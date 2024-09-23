@@ -1,9 +1,9 @@
-<h1 align="center">VueDex - LeafGreen - A Pokédex Built with Vue.js</h1>
+<h1 align="center">VueDex - LeafGreen - Uma Pokédex construída com Vue.js</h1>
 <p align="center">
   <img src="public/logo512.png" alt="VueDex-logo" width="120px" height="120px"/>
   <br>
-  <i>This webApp is an example of an application that can be built with the 
-    <br>JavaScript framework Vue.js.</i>
+  <i>Este webApp é um exemplo de aplicativo que pode ser construído com o 
+    <br>framework JavaScript Vue.js.</i>
   <br>
 </p>
 
@@ -15,7 +15,7 @@
 
 
 
-## Introduction
+## Introdução
 
 ![VueDex](snapshot/VueDex1.png)
 
@@ -26,10 +26,9 @@
 
 
 
-Single Page Application (SPA) built with the Vue.js library/framework (npx vue create app). The app's design was inspired by the site [https://pokeapi.co](https://pokeapi.co). Bootstrap, Flexbox, and media queries were used to create a responsive design (aiming to provide the best possible experience across multiple screen configurations/devices, both desktop and mobile, with different resolutions). Following the latest guidelines of the Vue.js framework, the app was constructed using the Options API of Vue 3 and packages like 'vue-router'.
+Single Page Application (SPA) construída com a library/framework Vue.js (npx vue create app). O design do app foi inspirado pelo site [https://pokeapi.co](https://pokeapi.co). Bootstrap, Flexbox e media queries foram utilizados na construção do design responsivo (tentativa de fornecer a melhor experiência possível a múltiplas configurações de tela/dispositivos, tanto desktop como mobile, com diferentes resoluções). Seguindo as últimas orientações do Framework Vue.js, o app foi constituído através do uso da Options API do Vue 3 e pacotes como 'vue-router'.
 
-The app was initialized/bootstrapped with the command/environment `npx vue create app` and deployed using GitHub Pages, assisted by GitHub Actions.
-
+O app foi inicializado/bootstrapped com o comando/environment `npx vue create app` e implantado (deploy) com o GitHub Pages, assistido pelo recurso GitHub Actions.
 
 ![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/nothingnothings/VueDex?style=flat-square)
 [![HitCount](https://hits.dwyl.com/nothingnothings/VueDex.svg?style=flat-square)](http://hits.dwyl.com/nothingnothings/VueDex)
@@ -39,27 +38,26 @@ The app was initialized/bootstrapped with the command/environment `npx vue creat
 
 
 
+ 
+## Tecnologias
+ 
+ Algumas das linguagens e libraries empregadas:
+ 
+ - Node Package Manager (bootstrapping e gerenciamento do aplicativo React)
+ - HTML5
+ - SASS (para melhor organização das regras de CSS, nested rules, etc)
+ - CSS3 (animações, Flexbox, media queries)
+ - Vue.JS versão 3 (framework JavaScript, que propõe a divisão integral do app em Vue components)
+ - Typescript (para a type safety dos objetos recebidos pelos endpoints do backend; Models e Interfaces, etc.)
+ - Vue Router (para a navegação entre as diferentes "páginas" do aplicativo)
+ - Manage local de state (dois states principais: o central, em "App.js", usado nas páginas "Pokedex" e "Procurar por um Pokémon", e o relativo aos pokémons indivíduais,  localizado na página "PokemonDetails", acessada pela route "/pokedex/:idDoPokemon")
+ - Bootstrap (usado na barra de navegação e no posicionamento geral dos elementos na página, com "container", "row" e "col")
+ - Axios (para a comunicação, requests e responses, entre este aplicativo frontend e o backend visado/buscado por ele, os API endpoints disponibilizados pelo domínio "pokeapi.co")
+ 
+ 
+## Estrutura de Diretórios do Projeto
 
- 
-## Technologies
- 
-Some of the languages and libraries used:
-
-- Node Package Manager (bootstrapping and management of the React application)
-- HTML5
-- SASS (for better organization of CSS rules, nested rules, etc.)
-- CSS3 (animations, Flexbox, media queries)
-- Vue.js version 3 (JavaScript framework that proposes the complete division of the app into Vue components)
-- Typescript (for type safety of objects received from backend endpoints; Models and Interfaces, etc.)
-- Vue Router (for navigation between the different "pages" of the application)
-- Local state management (two main states: the central one in "App.js," used in the "Pokedex" and "Search for a Pokémon" pages, and the one related to individual Pokémon, located on the "PokemonDetails" page, accessed via the route "/pokedex/:idDoPokemon")
-- Bootstrap (used in the navigation bar and overall positioning of elements in the page, with "container," "row," and "col")
-- Axios (for communication, requests, and responses between this frontend application and the targeted backend, the API endpoints provided by the domain "pokeapi.co")
- 
- 
-## Project's Directory Structure
-
-The development environment (created using the tool/environment/workflow `npx vue create app`):
+O ambiente de desenvolvimento (com utilização da ferramenta/environment/worfklow `npx vue create app`):
 
 
 ```
@@ -204,8 +202,7 @@ The development environment (created using the tool/environment/workflow `npx vu
 ```
 
 
-The production output of `npx vue create app`, which can be viewed in the `gh-pages` branch (responsible for the app's deployment):
-
+O output de produção de `npx vue create app`, que pode ser visualizado no branch`gh-pages` (encarregado da implementação/deployment do app):
 
 
 ```
@@ -256,9 +253,9 @@ The production output of `npx vue create app`, which can be viewed in the `gh-pa
 
 
 
-## Project Configuration Files (package.json and tsconfig.json)
+## Arquivos de Configuração do Projeto (package.json e tsconfig.json)
 
-The package.json file used in the project:
+O arquivo package.json utilizado no projeto:
 
 ```
 {
@@ -363,9 +360,7 @@ The package.json file used in the project:
 ```
 
 
-The tsconfig.json file used in the project:
-
-
+O arquivo tsconfig.json utilizado no projeto: 
 
 ```
 
@@ -401,29 +396,29 @@ The tsconfig.json file used in the project:
 
 ```
 
-## Installation/Usage
+## Instalação/Utilização 
 
 
-To use this project, clone it using Git:
+Para usar este projeto, clone-o usando Git:
 
-1. Run `git clone` to clone the project into your local Git repository.
-2. Run `npm install` to install all dependencies (`vue`, `axios`, etc.).
-3. Run `npm run build` to create the production/deployment version of the application (produced in the `/dist` directory).
-4. Serve the production/deployment files locally or on the web (with the help of a hosting service).
-5. On the "Pokédex" page, click/tap on the Pokémon whose characteristics you want to view. On the "Search for a Pokémon" page, type the name of the Pokémon you wish to search for.
+1. Rode `git clone` para clonar o projeto dentro de seu repositório local Git
+2. Rode `npm install` para instalar todas as dependências (`vue`, `axios`, etc)
+3. Rode `npm run build` para criar a versão de produção/implementação (production/deployment) do aplicativo (produzido no diretório `/dist`)
+4. Sirva os arquivos de produção/implementação localmente ou na web (com a ajuda de algum serviço de hospedagem)
+5. Na página "Pokédex", clique/toque no Pokémon cujas características deseja visualizar. Na página "Procurar por um Pokémon", digite o nome do Pokémon que deseja buscar
 
 
-## Features
+## Destaques (features)
 
-- Single-page application, without page reloads, using a single HTML file (Vue.js).
-- Application divided into multiple components, some used more than once across different pages (design philosophy of the Vue.js library).
-- Design created with CSS (compiled from .scss files).
-- Responsive design (adaptive, supporting both mobile and desktop devices) created with Bootstrap, Flexbox, and media queries.
-- Utilization of GitHub Actions and GitHub Pages with the tool `npx vue create app` to build a seamless workflow (transition from development phase to production/deployment phase). After the `git push` command, GitHub Actions transfers the contents of the `master` branch to the `gh-pages` branch, which then deploys the app at https://nothingnothings.github.io/VueDex/.
-- Use of the Axios library for communication with the backend "pokeapi.co", which provides Pokémon data (names, IDs, weight, height, types, abilities, etc.) to the Vue application.
-- Use of integral features of the Vue.js library, such as the options `data(){}`, `components:{}`, `methods:{}`, `computed:{}`, `watch:{}`, and `props:{}`.
-- Use of hooks from the Vue.js library, such as `created(){}` and `mounted(){}`.
-- Custom loading spinner (Pokéball).
-- Custom error page, displaying the message/reason for the error to the user.
-- Favicon compatible with various devices.
+- Aplicativo página única, sem recarregamentos de página, arquivo HTML único (Vue.js)
+- Aplicativo dividido em diversos componentes, alguns deles utilizados mais de uma única vez, em páginas distintas (filosofia de design da library Vue.js)
+- Design criado com CSS (compilado a partir de arquivos .scss)
+- Design responsivo (adaptativo, suporte a dispositivos móveis e desktop) criado com Bootstrap, Flexbox e media queries
+- Utilização dos recursos GitHub Actions e GitHub Pages com a ferramenta `npx vue create app` para construir um workflow ininterrupto (transição da fase de desenvolvimento para a fase de produção/implementação). A partir do comando `git push`, o GitHub Actions transfere o conteúdo do branch `master` para dentro do branch `gh-pages`, o qual então implementa/faz deploy do app no endereço https://nothingnothings.github.io/VueDex/
+- Utilização do pacote/ferramenta Axios para a comunicação com o backend "pokeapi.co", que fornece os dados dos Pokémons (nomes, IDs, peso, altura, tipos, abilidades, etc) ao aplicativo Vue
+- Utilização de recursos integrais da library Vue.js, como as options "``data(){}``", "``components:{}``", "``methods:{}``", "``computed:{}``", "``watch:{}``" e "``props:{}``"
+- Utilização de hooks da library Vue.js, como "``created(){}``" e "``mounted(){}``"
+- Spinner customizado de carregamento (pokébola)
+- Página de erro customizada, com output da mensagem/motivo do erro ao usuário
+- Favicon compatível com diversos dispositivos
 
